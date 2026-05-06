@@ -6,6 +6,14 @@
 
 
 
-async def start_program():
-    # Write code here
-    return
+async def startProgram():
+
+    await speak("Hello World", True)
+
+    set_main_led({'r': 0, 'g': 0, 'b': 255})
+
+    set_speed(60)
+
+    await delay(2)
+
+    set_speed(0)
