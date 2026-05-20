@@ -1,0 +1,18 @@
+#Programmers: CorDae&Matthew
+#sphereoBolt ID:CF6D
+#Date 5.4.2026
+#programs SandBox Training
+async def startProgram():
+    drive(True)
+    await delay(1)
+    await roll(0, 26,5 )
+    set_main_led({'r':255, 'g':0, 'b':255})
+    await delay(5)
+    await spin(90, 1)
+    drive(True)
+    await roll(90, 20, 5)
+    set_main_led({'r':0, 'g':255, 'b':0})
+    await delay(5)
+    await roll((get_heading() + 90), 50, 1)
+    await roll((get_heading() + 45), 60, 1)
+    await Sound.EightBit.Win.play(True)
