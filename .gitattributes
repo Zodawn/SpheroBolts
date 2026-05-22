@@ -107,7 +107,7 @@ async def startProgram():
     await delay(2)
     await roll((get_heading() + 270), 50, 1)
     await delay(1)
-    await roll((get_heading() + 270), 65, 1)
+    await roll((get_heading() + 270), 60, 1)
     play_matrix_animation(0, True)
     await delay(2)
     play_matrix_animation(0, False)
@@ -115,3 +115,7 @@ async def startProgram():
     await delay(1)
     await roll((get_heading() + 90), 35.48, 1)
     set_main_led({'r':0, 'g':0, 'b':255}) 
+    await delay(2)
+    await roll((get_heading() - 100), 40.48, 1)
+    set_main_led({'r':255, 'g':165, 'b':0})
+    
